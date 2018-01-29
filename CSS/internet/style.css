@@ -1,0 +1,111 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+#wrapper{
+    width: 970px;
+    padding: 20px;
+}
+#globe{
+    width: 60px;
+    display: inline-block;
+}
+h1{
+    display: inline-block;
+}
+#sidebar{
+    width: 200px;
+}
+.side_top{
+    padding-top: 10px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid gray;
+}
+.side_bottom{
+    margin-top: 20px;
+    margin-right: 0px;
+    background-image: url("ad_background.png");
+}
+#p_side1, #p_side2{
+    line-height: 20px;
+}
+#p_side2{
+    margin-top: 15px;
+}
+span{
+   color:  rgb(4, 66, 121); 
+}
+#red{
+    color: red;
+}
+h2{
+    background-color: rgb(4, 66, 121);
+    color: white;
+    padding: 12px;
+}
+#button1{
+    background-color:  rgb(4, 66, 121);
+    margin-top: 20px;
+}
+#button2{
+    background-color: rgb(255, 153, 0);
+}
+#button3{
+    background-color: rgb(56, 213, 249);
+    margin-top: 10px;
+    margin-bottom: 35px;
+    border-style: outset;
+}
+#button1, #button2, #button3{
+    color: white;
+    text-align: center;
+    margin-left: 10px;
+    padding: 7px;
+    border-radius: 10px;
+}
+#ninja{
+    width: 75px;
+    margin-left: 50px;
+}
+h3{
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+}
+h4{
+    font-size: 26px;
+    color: rgb(64, 181, 224);
+}
+h5{
+    color: black;
+    font-size: 10px;
+}    
+h6{
+    color: rgb(4, 66, 121);
+    padding-bottom: 14px;
+}
+#sidebar, .main, #home, h6{
+    display: inline-block;
+}
+.main{
+    width: 740px;
+    margin: 10px;
+    vertical-align: top;
+}
+#home{
+    width: 20px;
+}
+#phone{
+    width: 50px;
+}
+.contact{
+    width: 400px;
+    text-align: right;
+    padding-bottom: 20px;
+}
+.content{
+    border-top: 2px solid gray;
+    border-left: 2px solid gray;
+    border-right: 2px solid gray;
+}
