@@ -1,0 +1,92 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif
+}
+#wrapper{
+    width: 970px;
+    padding: 20px;
+    background-color: rgb(9, 70, 201);
+}
+#header img, .searchbar{
+    display: inline-block;
+    vertical-align: top;
+}
+#header p{
+    color: white;
+    text-align: right;
+}
+#header a{
+    color: yellow;
+}
+.searchbar{
+    background-color: rgb(82, 79, 79);
+    padding: 20px;
+    border-radius: 10px;
+    border-color: black;
+    border-style: outset;
+}
+#search{
+    padding: 10px;
+    text-align: center;
+}
+#button{
+    background-color: rgb(9, 70, 201);
+    border: 3px lightgrey;
+    border-style: outset;
+    border-radius: 3px;
+    margin-top: 4px;
+    padding: 5px;
+}
+#navbar{
+    padding: 10px;
+    background-color: lightskyblue;
+    border-color: gray;
+    border-style: outset;
+    border-radius: 10px;
+}
+#navbar li{
+    font-size: 24px;
+    color: white;
+    padding: 18px;
+    display: inline;
+}
+.body1 ul{
+    margin: 25px;
+    color: yellow;
+    text-align: center;
+    line-height: 25px;
+    list-style-position: inside;
+}
+.body1 ul a{
+    color: white;
+}
+.body1{
+    color: white;
+    text-align: center;
+    font-size: 14px;
+    vertical-align: top;
+}
+.body1 ul, #content{
+    display: inline-block;
+}
+#content{
+    margin-top: 25px;
+    vertical-align: top;
+}
+#poem{
+    width: 400px;
+    margin-left: 400px;
+    margin-bottom: 200px;
+    color:yellow;
+    font-size: 18px;
+    line-height: 36px;
+}
+span{
+    width: 400px;
+    color: white;
+}
+#body2{
+    width: 970px;
+    background-color: white;
+}

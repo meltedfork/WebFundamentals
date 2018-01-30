@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<style type="text/css">
+		#ocean{ 
+			background-image: url('img/sky.jpeg');
+			/*
+			background-image: url('img/ocean.jpg');
+			*/
+			width: 900px;
+			height: 700px;
+		}
+		.player{
+			position: absolute;
+			background-image: url('img/pterodactylBlack.png');
+			width: 70px;
+			height: 75px;
+		}
+
+		.enemy{
+			position: absolute;
+			background-image: url('img/bird.png');
+			width: 70px;
+			height: 75px;
+		}
+
+		.missile{
+			position: absolute;
+			background-color: orangered;
+			width: 2px;
+			height: 14px;
+		}
+	</style>
+
+	<div id="ocean">
+		<div id="players"></div>
+		<div id="enemies"></div>
+		<div id="missiles"></div>
+	</div>
+
+	<script type="text/javascript">
+		var gameBoundary = {
+			left: 900,
+			top: 700
+		}
+		var player = {
+			left: 400,
+			top: 620
+		}
+		var enemies = [
+			{left: 500, top: 100},
+			{left: 450, top: 150},
+			{left: 400, top: 200},
+			{left: 400, top: 100},
+			{left: 350, top: 150},
+			{left: 300, top: 100}
+		]
+		var missiles = [];
+
+		function drawPlayer(){
+			content = "<div class='player' style='left:"+player.left+"px; top:"+player.top+"px'></div>";
+			document.getElementById("players").innerHTML = content;
+		}
+
+		function drawEnemies(){
+			content = "";
+			for(i = 0; i < enemies.length; i++) {
+				content += "<div class='enemy' style='left:"+enemies[i].left+"px; top:"+enemies[i].top+"px'></div>";
+			}
+			document.getElementById("enemies").innerHTML = content;
+		}
+		
+		function moveEnemies(){
+			for(i = 0; i < enemies.length; i++) {
+				//NOTE: if statement sets limit for enemies to travel
+				if(enemies[i].top < gameBoundary.top){	
+					enemies[i].top = enemies[i].top + (Math.random() * 10); 
+				}
+				//enemies[i].top = enemies[i].top + 5;
+				
+				//NOTE: trying to make enemies stop moving when reach player
+				/*
+				if("<div class='enemy' style=top:"+enemies[i].top+"px'></div>" === "<div class='player' style=top:"+player.top+"px'></div>"){
+					console.log("stop right there!")
+				}
+				//OR trying this
+				if(enemies[i].top === player.top){
+					console.log("stop right there!")
+				}
+				*/
+			}
+			
+			console.log("enemies on the move!")
+		}
+
+		function drawMissiles(){
+			content = "";
+			for(i = 0; i < missiles.length; i++) {
+				content += "<div class='missile' style='left:"+missiles[i].left+"px; top:"+missiles[i].top+"px'></div>";
+			}
+			document.getElementById("missiles").innerHTML = content;	
+		}
+
+		function moveMissiles(){
+			for(i = 0; i < missiles.length; i++) {
+				missiles[i].top = missiles[i].top - 20;
+				// NOTE: randomized missiles
+				//missiles[i].top = missiles[i].top - Math.floor(Math.random() * 20);  
+			}	
+		}
+	
+		document.onkeydown = function(e) {
+			if(e.keyCode == 37 && player.left > 50){
+				player.left = player.left - 10;
+			}
+			if(e.keyCode == 39 && player.left < 800){
+				player.left = player.left + 10;
+			}
+			if(e.keyCode == 38 && player.top > 400){
+				player.top = player.top - 10;
+			}
+			if(e.keyCode == 40 && player.top < 650){
+				player.top = player.top + 10;
+			}
+			if(e.keyCode == 32){
+				missiles.push({left: (player.left + 35), top: (player.top - 8)});
+				drawMissiles();
+			}
+			
+			drawPlayer();
+		}
+
+		function gameLoop(){
+			console.log("gameLoop is running");
+			drawPlayer();
+			moveEnemies();
+			drawEnemies();
+			moveMissiles();
+			drawMissiles();
+			setTimeout(gameLoop, 50);
+		}
+		gameLoop();
+
+	</script>
+	
+</body>
+</html>
