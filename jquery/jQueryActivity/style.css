@@ -1,0 +1,35 @@
+h1{
+    color: darkblue;
+    background-color: yellowgreen;
+    text-align: center;
+}
+h2{
+    color: darkcyan;
+    text-align: center;
+}
+.header{
+    padding: 15px;
+    border-color: gray;
+    border-style: groove;
+}
+.bright{
+    color: rgb(232, 51, 232);
+}
+button{
+    margin: 6px;
+    padding: 4px;
+    background-color: yellowgreen;
+    border-color: purple;
+    color: purple;
+}
+#lego{
+    width: 50%;
+    position: center;
+}
+#toggle, #lego{
+    display: block;
+}
+#tree{
+    width: 50%;
+    position: center;
+}

@@ -1,0 +1,13 @@
+table{
+    border: 3px solid black;
+}
+th{
+    padding: 15px;
+}
+input{
+    display: right;
+}
+h1{
+    width: 300px;
+    border-bottom: 2px solid black
+}

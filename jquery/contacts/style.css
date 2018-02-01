@@ -1,0 +1,35 @@
+textarea{
+    display: block;
+    padding-right: 68px;
+    padding-bottom: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    text-align: left;
+}
+#submit, textarea{
+    display: block;
+}
+.infocard{
+    width: 240px;
+    padding: 15px;
+    color: slateblue;
+    background-color: lightslategray;
+    border: 3px solid slateblue;
+}
+.sidebar, h1, #submit{
+    width: 250px;
+}
+#leftside{
+    height: 1000px;
+    width: 250px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
+.sidebar{
+    height: 1000px;
+    width: 250px;
+    margin: 0px;
+    display: inline-block;
+    vertical-align: top;
+}
