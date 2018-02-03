@@ -1,0 +1,19 @@
+#wrapper{
+    width: 950px;
+}
+img{
+    display: block;
+}
+#left{
+    width: 300px;
+    display: inline-block;
+    border: 1px solid black;
+    vertical-align: top;
+}
+#right{
+    width: 200px;
+    display: inline-block;
+    border: 3px solid red;
+    background-color: aliceblue;
+    vertical-align: top;
+}
